@@ -1,0 +1,44 @@
+/* =============
+    Footer
+============= */
+footer {
+    background-color: $black;
+    height: 90px;
+    margin-top: 20px;
+    padding: 0 60px;
+    @include sm {
+        padding: 0 10px;
+    }
+
+    ul {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        @include sm {
+            justify-content: flex-end;
+        }
+        @include md {
+            justify-content: flex-end;
+        }
+        @include lg {
+            justify-content: flex-end;
+        }
+
+        li {
+            i {
+                color: $footer-icons;
+                font-size: rem-calc(40);
+                @include sm {
+                    padding: 0 20px;
+                }
+                @include md {
+                    padding: 0 20px;
+                }
+                @include lg {
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+}

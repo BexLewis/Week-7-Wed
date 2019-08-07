@@ -1,0 +1,118 @@
+/* =============
+    Gallery
+============= */
+#gallery {
+    section {
+        div {
+            background-image: url("../img/gallery-respon.jpg");
+        }
+    }
+
+    ul {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-areas: "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3" "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3" "gallery-2 gallery-2 gallery-4 gallery-4 gallery-4" "gallery-2 gallery-2 gallery-5 gallery-5 gallery-5";
+        grid-template-rows: repeat(4, 100px);
+        margin: 40px 10px;
+        @include sm {
+            grid-template-areas: "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3" "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3" "gallery-2 gallery-2 gallery-5 gallery-5 gallery-5" "gallery-2 gallery-2 gallery-5 gallery-5 gallery-5";
+            grid-template-rows: repeat(4, 130px);
+        }
+        @include md {
+            grid-gap: 10px;
+            grid-template-areas: "gallery-1 gallery-1 gallery-3 gallery-2" "gallery-1 gallery-1 gallery-3 gallery-2" "gallery-4 gallery-4 gallery-5 gallery-5" "gallery-6 gallery-6 gallery-6 gallery-6";
+            grid-template-rows: repeat(4, 150px);
+            padding: 0 50px;
+        }
+        @include lg {
+            grid-template-areas: "gallery-1 gallery-1 gallery-1 gallery-1 gallery-3 gallery-3 gallery-3 gallery-2 gallery-2 gallery-2 gallery-7 gallery-7 gallery-7 gallery-7" "gallery-4 gallery-4 gallery-4 gallery-4 gallery-4 gallery-5 gallery-5 gallery-5 gallery-5 gallery-5 gallery-7 gallery-7 gallery-7 gallery-7";
+            grid-template-rows: repeat(2, 250px);
+        }
+        @include xl {
+            grid-template-areas: "gallery-1 gallery-3 gallery-2 gallery-5";
+            grid-template-columns: auto 20% 20% auto;
+            grid-template-rows: 452px;
+            margin: 40px 0;
+            padding: 0;
+        }
+
+        li {
+            background-size: cover;
+            height: 100%;
+        }
+
+        #gallery-1 {
+            background-image: url("../img/gallery/gallery-1-res.jpg");
+            grid-area: gallery-1;
+        }
+
+        #gallery-2 {
+            background-image: url("../img/gallery/gallery-2-res.jpg");
+            grid-area: gallery-2;
+        }
+
+        #gallery-3 {
+            background-image: url("../img/gallery/gallery-3-res.jpg");
+            grid-area: gallery-3;
+        }
+
+        #gallery-4 {
+            background-image: url("../img/gallery/gallery-4-res.jpg");
+            grid-area: gallery-4;
+            @include sm {
+                display: none;
+            }
+            @include md {
+                display: block;
+            }
+            @include xl {
+                display: none;
+            }
+            @include xl {
+                display: none;
+            }
+        }
+
+        #gallery-5 {
+            background-image: url("../img/gallery/gallery-5-res.jpg");
+            grid-area: gallery-5;
+        }
+
+        #gallery-6 {
+            background-image: url("../img/gallery/gallery-6-res.jpg");
+            display: none;
+            grid-area: gallery-6;
+            @include sm {
+                display: none;
+            }
+            @include md {
+                display: block;
+            }
+            @include lg {
+                display: none;
+            }
+            @include xl {
+                display: none;
+            }
+        }
+
+        #gallery-7 {
+            background-image: url("../img/gallery/gallery-7-res.jpg");
+            display: none;
+            grid-area: gallery-7;
+            @include sm {
+                display: none;
+            }
+            @include md {
+                display: none;
+            }
+            @include lg {
+                background-position: -250px;
+                display: block;
+            }
+            @include xl {
+                display: none;
+            }
+        }
+    }
+}

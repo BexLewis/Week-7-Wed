@@ -1,0 +1,184 @@
+/* =============
+    Gallery
+============= */
+#contact {
+    grid-area: contact-fixed-text;
+
+    section {
+        div {
+            background-image: url("../img/contact-respon.jpg");
+            background-position: -30px;
+            height: 100%;
+        }
+    }
+
+    #contact-fixed {
+        @include xl {
+            display: grid;
+            grid-template-areas: ". contact-fixed-text .";
+            grid-template-columns: auto 1440px auto;
+        }
+
+        #form-bois {
+            grid-area: contact-fixed-text;
+            @include md {
+                display: grid;
+                grid-template-areas: "name name name rating rating rating" "fave fave fave num num num" "why why why why why why" ". . sub sub . .";
+            }
+            @include lg {
+                grid-template-areas: "name name fave fave" "num num why why" "rating rating why why" "sub . why why";
+                padding: 0 150px;
+            }
+
+            .form {
+                padding: 10px 15px 10px 10px;
+                @include sm {
+                    padding: 10px 70px 10px 60px;
+                }
+                @include md {
+                    padding: 25px;
+                }
+
+                li:first-child {
+                    color: $form-header;
+                    font-family: 'Assistant', sans-serif;
+                    font-size: rem-calc(23);
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+
+                li:nth-child(2) {
+                    border-style: solid;
+                    border-width: 2px;
+                    color: $form-boxes;
+                    height: 41px;
+                    margin-right: 15px;
+                    width: 100%;
+                }
+
+                li:last-child {
+                    color: $form-text;
+                    font-family: 'Heebo', sans-serif;
+                    font-size: rem-calc(19);
+                    margin-top: 5px;
+                }
+            }
+
+            #fave {
+                grid-area: fave;
+
+                li:last-child {
+                    font-family: 'Heebo', sans-serif;
+                    font-weight: 600;
+                    text-align: center;
+
+                    a:link,
+                    a:visited {
+                        color: $form-text;
+                    }
+
+                    a:active,
+                    a:hover {
+                        color: $black;
+                    }
+                }
+            }
+
+            #num {
+                grid-area: num;
+            }
+
+            #name {
+                grid-area: name;
+            }
+
+            #why {
+                grid-area: why;
+
+                li:nth-child(2) {
+                    border-style: solid;
+                    border-width: 2px;
+                    color: $form-boxes;
+                    height: 134px;
+                    margin-right: 15px;
+                }
+                @include md {
+                    padding: 25px 300px;
+                }
+                @include lg {
+                    padding: 25px;
+                }
+            }
+
+            #sub-container {
+                padding-top: 25px;
+                grid-area: sub;
+                @include lg {
+                    padding-left: 25px;
+                }
+
+                #sub {
+                    display: flex;
+                    justify-content: center;
+                    align-items: baseline;
+                    color: $white;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: rem-calc(21);
+
+                    a:link,
+                    a:visited {
+                        color: $white;
+                    }
+
+                    a:active,
+                    a:hover {
+                        color: $black;
+                    }
+                }
+            }
+
+            #scale {
+                padding: 10px 15px 10px 10px;
+                @include sm {
+                    padding: 10px 60px 10px 70px;
+                }
+                @include md {
+                    padding: 30px 0 0 30px;
+                    grid-area: rating;
+                }
+
+                li:first-child {
+                    color: $form-header;
+                    font-family: 'Assistant', sans-serif;
+                    font-size: rem-calc(23);
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+
+                li:nth-child(2) {
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px 0;
+                    @include md {
+                        padding: 0;
+                        justify-content: center;
+                    }
+
+                    i {
+                        color: $frog-icons;
+                        font-size: rem-calc(40);
+                        margin-left: 10px;
+                    }
+                }
+
+                li:last-child {
+                    color: $form-text;
+                    font-family: 'Heebo', sans-serif;
+                    font-size: rem-calc(19);
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

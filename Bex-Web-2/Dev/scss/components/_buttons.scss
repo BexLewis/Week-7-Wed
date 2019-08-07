@@ -1,0 +1,43 @@
+/* =============
+    Buttons
+============= */
+.good-button {
+    background-color: $button;
+    border-bottom-color: $button-shadow;
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
+    height: 35px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include md {
+        height: 50px;
+        padding: 0 30px;
+    }
+
+    li {}
+}
+
+.sub-button {
+    background-color: $button;
+    border-bottom-color: $button-shadow;
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 17px 140px 0;
+
+    @include md{
+    margin:  0;
+
+
+    }
+
+    @include lg {
+        //margin: 40px 25px;
+        //    padding: 0 25px;
+    }
+}

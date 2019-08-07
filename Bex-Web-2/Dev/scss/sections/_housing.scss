@@ -1,0 +1,164 @@
+/* =============
+    Housing
+============= */
+#housing {
+    section {
+        div {
+            background-image: url("../img/housing-respon.jpg");
+        }
+    }
+
+    article {
+        @include xl {
+            display: grid;
+            grid-template-areas: ". housing-fixed-text .";
+            grid-template-columns: auto 1440px auto;
+        }
+
+        div {
+            grid-area: housing-fixed-text;
+            padding: 15px;
+            @include md {
+                padding: 15px 50px;
+            }
+            @include lg {
+                padding: 50px 60px;
+            }
+            @include xl {
+                padding: 50px 170px;
+            }
+
+            aside {
+                margin-left: 15px;
+                @include lg {
+                    margin-left: 0;
+                }
+
+                h2 {
+                    color: $subheading;
+                    font-family: 'Assistant', sans-serif;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                    margin-top: 30px;
+                    @include lg {
+                        margin-top: 60px;
+                    };
+                    @include xl {
+                        text-align: center;
+                    }
+                }
+
+                p {
+                    margin: 0 40px 0 0;
+                    @include lg {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        p {
+            font-family: 'Heebo', sans-serif;
+            font-size: rem-calc(17);
+            grid-area: paragraph;
+            line-height: rem-calc(23);
+            text-align: justify;
+
+            a:link,
+            a:visited {
+                color: $link-accent;
+                font-size: rem-calc(17);
+                font-weight: 600;
+            }
+
+            a:active,
+            a:hover {
+                color: $black;
+            }
+        }
+    }
+
+    .container {
+        padding: 0;
+        @include xl {
+            display: grid;
+            grid-template-areas: ". but-con .";
+            grid-template-columns: auto 1440px auto;
+            padding: 0;
+        }
+
+        .button-container {
+            background-image: url("../img/terrarium-1.jpg");
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: grid;
+            grid-area: but-con;
+            grid-template-areas: "but-title but-title but-title" ". gb-1 ." ". gb-2 ." ". gb-3 .";
+            height: 286px;
+            margin-bottom: 90px;
+            margin-top: 30px;
+            @include md {
+                grid-template-areas: "but-title but-title but-title but-title but-title" "gb-1 . gb-2 . gb-3";
+                height: 204px;
+                margin: 30px 35px 90px;
+                padding: 0 30px;
+            }
+            @include lg {
+                margin: 30px 170px 90px;
+            }
+            @include xl {
+                padding: 0 80px;
+                
+            }
+
+            li:first-child {
+                color: $white;
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: rem-calc(30);
+                grid-area: but-title;
+                padding-top: 20px;
+                text-align: center;
+                @include sm {
+                    font-size: rem-calc(35);
+                }
+                @include md {
+                    font-size: rem-calc(40);
+                    padding-top: 30px;
+                }
+            }
+
+            li:nth-child(2) {
+                grid-area: gb-1;
+            }
+
+            li:nth-child(3) {
+                grid-area: gb-2;
+            }
+
+            li:last-child {
+                grid-area: gb-3;
+            }
+
+            li {
+                color: $white;
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: rem-calc(21);
+                grid-area: gb;
+                @include sm {
+                    font-size: rem-calc(30);
+                }
+
+                a:link,
+                a:visited {
+                    color: $white;
+                }
+
+                a:active,
+                a:hover {
+                    color: $black;
+                }
+            }
+        }
+    }
+}

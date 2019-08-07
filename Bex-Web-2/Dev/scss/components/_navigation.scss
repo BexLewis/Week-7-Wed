@@ -1,0 +1,57 @@
+/* =============
+    Navigation
+============= */
+header {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: rem-calc(23);
+
+    a:link,
+        a:visited {
+            color: $white;
+
+        }
+
+        a:active,
+        a:hover {
+            color: $black;
+            @include lg{
+
+                border-bottom: 2px solid $black;
+                padding-bottom: 3px;
+            }
+
+
+        }
+
+    section{
+        padding: 10px;
+        font-size: rem-calc(35);
+    }
+    nav {
+        ul {
+
+            margin:10px 20px;
+            @include lg {
+                display: flex;
+                justify-content: flex-start;
+                margin: 10px;
+
+            }
+
+            li {
+
+                color:$white;
+                @include lg{
+                padding:0 10px;
+
+                border-right: 2px solid $white;
+
+            }
+
+            }
+            li:last-child{
+                border:none;
+            }
+        }
+    }
+}
