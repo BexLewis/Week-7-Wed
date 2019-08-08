@@ -427,6 +427,10 @@ font-family: 'Assistant', sans-serif;*/
     .sub-button {
       margin: 0; } }
 
+button {
+  margin: 0;
+  padding: 0; }
+
 /* =============
     Forms
 ============= */
@@ -549,6 +553,31 @@ footer {
       @media (min-width: 990px) {
         footer ul li i {
           padding: 0 20px; } }
+
+/* =============
+    Burger
+============= */
+#burger-container {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  outline: none;
+  position: relative;
+  width: 100px; }
+  #burger-container button {
+    background-color: #000;
+    height: 3px;
+    margin-bottom: 20px;
+    position: absolute;
+    width: 100%; }
+  #burger-container div:nth-child(1) {
+    top: 0; }
+  #burger-container div:nth-child(2) {
+    top: 20px; }
+  #burger-container div:nth-child(3) {
+    margin: 0;
+    top: 40px; }
 
 /* =============
     Hero-1
