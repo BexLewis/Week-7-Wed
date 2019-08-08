@@ -449,23 +449,20 @@ textarea {
 /* =============
     Navigation
 ============= */
-header {
+header nav {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.4375rem; }
-  header a:link,
-  header a:visited {
+  header nav a:link,
+  header nav a:visited {
     color: #fff; }
-  header a:active,
-  header a:hover {
+  header nav a:active,
+  header nav a:hover {
     color: #000; }
     @media (min-width: 990px) {
-      header a:active,
-      header a:hover {
+      header nav a:active,
+      header nav a:hover {
         border-bottom: 2px solid #000;
         padding-bottom: 3px; } }
-  header section {
-    padding: 10px;
-    font-size: 2.1875rem; }
   header nav ul {
     margin: 10px 20px; }
     @media (min-width: 990px) {
@@ -558,14 +555,14 @@ footer {
     Burger
 ============= */
 #burger-container {
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   height: 40px;
   outline: none;
   position: relative;
   width: 100px; }
-  #burger-container button {
+  #burger-container div {
     background-color: #000;
     height: 3px;
     margin-bottom: 20px;

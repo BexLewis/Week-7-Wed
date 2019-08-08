@@ -1,9 +1,8 @@
 /* =============
     Burger
 ============= */
-
 #burger-container {
-    background-color: $white;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     height: 40px;
@@ -11,7 +10,7 @@
     position: relative;
     width: 100px;
 
-    button {
+    div {
         background-color: $black;
         height: 3px;
         margin-bottom: 20px;
