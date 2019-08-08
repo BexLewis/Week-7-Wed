@@ -8,11 +8,13 @@
     height: 40px;
     outline: none;
     position: relative;
-    width: 100px;
+    width: 50px;
+    margin: 10px 5px;
+
 
     div {
-        background-color: $black;
-        height: 3px;
+        background-color: $white;
+        height: 6px;
         margin-bottom: 20px;
         position: absolute;
         width: 100%;

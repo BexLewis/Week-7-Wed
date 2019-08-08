@@ -561,10 +561,11 @@ footer {
   height: 40px;
   outline: none;
   position: relative;
-  width: 100px; }
+  width: 50px;
+  margin: 10px 5px; }
   #burger-container div {
-    background-color: #000;
-    height: 3px;
+    background-color: #fff;
+    height: 6px;
     margin-bottom: 20px;
     position: absolute;
     width: 100%; }
@@ -580,7 +581,8 @@ footer {
     Hero-1
 ============= */
 #hero-1 {
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  margin-top: 30px; }
   #hero-1 section {
     grid-template-columns: 30% auto 2%; }
     @media (min-width: 523px) {
